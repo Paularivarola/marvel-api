@@ -92,8 +92,6 @@ app.get("/api/issues", async (req, res) => {
   }
 });
 
-app.use("/api/*", (_req, res) => res.status(404).json({ error: "Not Found" }));
-
 app.listen(PORT, HOST, () => {
   console.log(`Servidor proxy corriendo en http://${HOST}:${PORT}`);
 });
